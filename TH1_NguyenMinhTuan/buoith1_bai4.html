@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mẫu Thông Tin Nhân Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        form {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        h2 {
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+        }
+        td:first-child {
+            width: 150px;
+            font-weight: bold;
+            text-align: right;
+            padding-right: 10px;
+        }
+        input[type="text"], select, textarea {
+            width: 98%;
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .notes-textarea {
+            width: 98%;
+            height: 100px;
+        }
+        .captcha-text {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #555;
+            padding: 5px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .button-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+        input[type="submit"], input[type="button"] {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        input[type="submit"] {
+            background-color: #e0e0e0;
+        }
+        input[type="button"] {
+             background-color: #e0e0e0;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <h2>Basic Info</h2>
+        <table>
+            <tbody><tr>
+                <td>Employee ID</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td><label for="last-name">Last Name</label></td>
+                <td><input type="text" id="last-name" name="last-name" value="Dodsworth"></td>
+            </tr>
+            <tr>
+                <td><label for="first-name">First Name</label></td>
+                <td><input type="text" id="first-name" name="first-name" value="Anne"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label><br>
+                    <input type="radio" id="xxx" name="gender" value="xxx"> <label for="xxx">XXX</label><br>
+                    <input type="radio" id="zzz" name="gender" value="zzz" checked=""> <label for="zzz">ZZZ</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="title">Title</label></td>
+                <td><input type="text" id="title" name="title" value="Sales Representative"></td>
+            </tr>
+            <tr>
+                <td><label for="suffix">Suffix</label></td>
+                <td><input type="text" id="suffix" name="suffix" value="Ms."></td>
+            </tr>
+            <tr>
+                <td><label for="birth-date">BirthDate</label></td>
+                <td><input type="text" id="birth-date" name="birth-date" value="1969-07-02 00:00:00"></td>
+            </tr>
+            <tr>
+                <td><label for="hire-date">HireDate</label></td>
+                <td><input type="text" id="hire-date" name="hire-date" value="1994-11-15 00:00:00"></td>
+            </tr>
+            <tr>
+                <td><label for="ssn">SSN # (if applicable)</label></td>
+                <td><input type="text" id="ssn" name="ssn"></td>
+            </tr>
+            <tr>
+                <td><label for="reports-to">Reports To</label></td>
+                <td>
+                    <select id="reports-to" name="reports-to">
+                        <option value="Buchanan" selected="">Buchanan</option>
+                        <option value="Fuller">Fuller</option>
+                        <option value="Leverling">Leverling</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody></table>
+
+        <h2>Contact Info</h2>
+        <table>
+            <tbody><tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="text" id="email" name="email" value="name@example.com"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><input type="text" id="address" name="address" value="7 Houndstooth Rd."></td>
+            </tr>
+            <tr>
+                <td><label for="city">City</label></td>
+                <td><input type="text" id="city" name="city" value="London"></td>
+            </tr>
+            <tr>
+                <td><label for="region">Region</label></td>
+                <td><input type="text" id="region" name="region"></td>
+            </tr>
+            <tr>
+                <td><label for="postal-code">Postal Code</label></td>
+                <td><input type="text" id="postal-code" name="postal-code" value="WG2 7LT"></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country</label></td>
+                <td>
+                    <select id="country" name="country">
+                        <option value="Russian Federation" selected="">Russian Federation</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Viet Nam">Viet Nam</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="us-home-phone">US Home Phone</label></td>
+                <td><input type="text" id="us-home-phone" name="us-home-phone" value="(234)234-2342"></td>
+            </tr>
+            <tr>
+                <td><label for="photo">Photo</label></td>
+                <td><input type="text" id="photo" name="photo" value="EmpID9.bmp"></td>
+            </tr>
+        </tbody></table>
+        
+        <h2>Optional Info</h2>
+        <table>
+            <tbody><tr>
+                <td style="vertical-align: top;"><label for="notes">Notes</label></td>
+                <td>
+                    <textarea id="notes" name="notes" class="notes-textarea">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Preferred Shift</td>
+                <td>
+                    <input type="radio" id="regular" name="shift" value="regular"> <label for="regular">Regular</label><br>
+                    <input type="radio" id="gravy-yard" name="shift" value="gravy-yard" checked=""> <label for="gravy-yard">Gravy Yard</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Active?</td>
+                <td><input type="checkbox" id="active" name="active" checked=""></td>
+            </tr>
+            <tr>
+                <td>Are you human?</td>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIqYv1gpuVnKEvC7D-BorTGbIG3bk8VhftQZLI-kqq1VWBh3xhYC7S6XzItK1hLYgKyIE&usqp=CAU" alt="CAPTCHA"><br> <a href="#" style="font-size:12px;">Click to change</a><br>
+                    <input type="text" id="captcha" name="captcha" style="width: 200px; margin-top: 5px;">
+                </td>
+            </tr>
+        </tbody></table>
+        
+        <hr style="margin-top: 20px;">
+
+        <div class="button-container">
+            <input type="submit" value="Submit">
+            <input type="button" value="Cancel">
+        </div>
+        <p><span class="required">*</span> required</p>
+    </form>
+
+</body>
+</html>```
