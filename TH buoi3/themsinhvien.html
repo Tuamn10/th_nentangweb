@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Sinh viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Form Thêm Sinh Viên</h1>
+
+        <form action="#" method="post">
+            <fieldset>
+                
+                <div class="form-group">
+                    <label for="ma_sv">Mã sinh viên:</label>
+                    <input type="text" id="ma_sv" name="ma_sv" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ho_ten">Họ và tên:</label>
+                    <input type="text" id="ho_ten" name="ho_ten" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ngay_sinh">Ngày sinh:</label>
+                    <input type="date" id="ngay_sinh" name="ngay_sinh">
+                </div>
+
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="nam" name="gioi_tinh" value="Nam" checked>
+                        <label for="nam" class="radio-label">Nam</label>
+                        
+                        <input type="radio" id="nu" name="gioi_tinh" value="Nữ">
+                        <label for="nu" class="radio-label">Nữ</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ghi_chu">Ghi chú:</label>
+                    <textarea id="ghi_chu" name="ghi_chu" rows="4"></textarea>
+                </div>
+
+                <div class="form-group button-group">
+                    <button type="submit">Thêm sinh viên</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <h1>Danh Sách Sinh Viên</h1>
+
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã SV</th>
+                    <th>Họ tên</th>
+                    <th>Email</th>
+                    <th>Giới tính</th>
+                    <th>Ngày sinh</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>SV001</td>
+                    <td>Nguyễn Văn An</td>
+                    <td>an.nv@example.com</td>
+                    <td>Nam</td>
+                    <td>2002-01-15</td>
+                    <td>
+                        <a href="#">Sửa</a> | <a href="#">Xoá</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>SV002</td>
+                    <td>Trần Thị Bình</td>
+                    <td>binh.tt@example.com</td>
+                    <td>Nữ</td>
+                    <td>2003-05-20</td>
+                    <td>
+                        <a href="#">Sửa</a> | <a href="#">Xoá</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>SV003</td>
+                    <td>Lê Hoàng Cường</td>
+                    <td>cuong.lh@example.com</td>
+                    <td>Nam</td>
+                    <td>2002-11-10</td>
+                    <td>
+                        <a href="#">Sửa</a> | <a href="#">Xoá</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
