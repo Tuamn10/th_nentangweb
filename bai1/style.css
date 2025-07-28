@@ -1,0 +1,312 @@
+/* Thiết lập chung */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header và Navigation */
+header {
+    background-color: #fff;
+    padding: 10px 30px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1140px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    border: 1px solid #28a745;
+    background-color: #28a745;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Nội dung chính và Bảng */
+main {
+    padding: 20px 30px;
+    max-width: 1140px;
+    margin: 20px auto 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.manage-employees-header {
+    background-color: #435d7d;
+    color: white;
+    padding: 15px 25px;
+    margin: -20px -30px 20px -30px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manage-employees-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.action-buttons .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.action-buttons .add-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.action-buttons .delete-btn i,
+.action-buttons .add-btn i {
+    margin-right: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.action-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.action-icon.edit {
+    color: #ffc107;
+}
+
+.action-icon.delete {
+    color: #dc3545;
+}
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    color: #6c757d;
+}
+
+.page-numbers a {
+    color: #007bff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #dee2e6;
+    margin: 0 2px;
+    border-radius: 4px;
+}
+
+.page-numbers a.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.page-numbers a:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+/* CSS cho Pop-up (Modal) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    border-top: 5px solid #435d7d;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.close-button {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+    border: none;
+    background: none;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+.modal-body {
+    padding: 20px 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Quan trọng */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 25px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #e9ecef;
+    border-radius: 0 0 8px 8px;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.modal-footer .cancel-btn {
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.modal-footer .add-action-btn {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+/* Lớp tiện ích để ẩn/hiện pop-up */
+.hidden {
+    display: none;
+}
+
+/* CSS cho thông báo lỗi */
+.error-message {
+    color: #dc3545; /* Màu đỏ cho văn bản lỗi */
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    min-height: 15px; /* Giữ không gian để layout không bị giật */
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #dc3545; /* Viền màu đỏ cho ô input lỗi */
+}

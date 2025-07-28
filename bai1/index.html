@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Nhân Viên</title>
+    <!-- Link đến thư viện Font Awesome để có các biểu tượng (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link đến tệp CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PHẦN HEADER -->
+    <header>
+        <nav>
+            <div class="logo">TLU</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Employees</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PHẦN NỘI DUNG CHÍNH -->
+    <main>
+        <div class="manage-employees-header">
+            <h2>Manage Employees</h2>
+            <div class="action-buttons">
+                <button class="delete-btn"><i class="fas fa-minus-circle"></i> Delete</button>
+                <button id="show-add-modal-btn" class="add-btn"><i class="fas fa-plus-circle"></i> Add New Employee</button>
+            </div>
+        </div>
+
+        <!-- BẢNG DỮ LIỆU NHÂN VIÊN -->
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Dữ liệu sẽ được JavaScript chèn vào đây -->
+            <tbody id="employee-table-body">
+            </tbody>
+        </table>
+
+        <!-- PHẦN PHÂN TRANG -->
+        <div class="pagination">
+            <span>Showing 5 out of 25 entries</span>
+            <div class="page-numbers">
+                <a href="#">Previous</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="active">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">Next</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- POP-UP FORM (MODAL) ĐỂ THÊM NHÂN VIÊN -->
+    <div id="addEmployeeModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Employee</h2>
+                <span class="close-button">×</span>
+            </div>
+            <!-- Form để nhập liệu, novalidate để tắt kiểm tra mặc định của trình duyệt -->
+            <form id="add-employee-form" novalidate>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3"></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="add-action-btn">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quan trọng: Tải data.js trước khi tải script.js -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
