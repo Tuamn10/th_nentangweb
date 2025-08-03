@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý - Trường Đại học Thủy lợi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+    <header class="app-header">
+        <div class="header-left">
+            <h3>TRƯỜNG ĐẠI HỌC THỦY LỢI</h3>
+        </div>
+        <div class="header-right">
+            <nav class="main-nav">
+                <a href="#">Trang chủ</a>
+                <a href="#">Quản lý cửa hàng</a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Nhập nội dung tìm kiếm">
+                <button>TÌM KIẾM</button>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="app-main">
+        <div class="top-controls-bar">
+            <div class="action-buttons">
+                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> THÊM MỚI</button>
+                <button class="btn btn-secondary"><i class="fa-solid fa-upload"></i> XUẤT RA FILE</button>
+            </div>
+            <div class="filter-search">
+                <button><i class="fas fa-chevron-right"></i></button>
+                <input type="text" placeholder="Tìm kiếm theo Tên">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="table-controls">
+                <span>Kết quả</span>
+                <select name="results-per-page" id="results-per-page">
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="data-table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Hành động</th>
+                        <th>STT <i class="fa-solid fa-sort"></i></th>
+                        <th>Tên <i class="fa-solid fa-sort"></i></th>
+                        <th>Họ đệm <i class="fa-solid fa-sort"></i></th>
+                        <th>Địa chỉ <i class="fa-solid fa-sort"></i></th>
+                        <th>Hoạt động <i class="fa-solid fa-sort"></i></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+            <div class="table-pagination">
+                <span>Kết quả 1 đến 4</span>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="app-footer">
+        <h4>TRƯỜNG ĐẠI HỌC THỦY LỢI</h4>
+        <p>Địa chỉ: 175 Tây Sơn, Đống Đa, Hà Nội</p>
+        <p>Điện thoại: (024) 38522201 - Fax: (024) 35633351</p>
+        <p>Email: phonghcth@tlu.edu.vn</p>
+    </footer>
+
+
+    <div class="modal-overlay" id="add-employee-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Thêm Nhân viên</h2>
+                <button class="modal-close-btn">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="add-form" novalidate>
+                    <div class="form-group">
+                        <label for="ten">Tên</label>
+                        <input type="text" id="ten" name="ten">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="ho-dem">Họ đệm</label>
+                        <input type="text" id="ho-dem" name="ho-dem">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dia-chi">Địa chỉ</label>
+                        <input type="text" id="dia-chi" name="dia-chi">
+                        <span class="error-message"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel">Hủy</button>
+                <button type="submit" form="add-form" class="btn-submit">Thêm</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
